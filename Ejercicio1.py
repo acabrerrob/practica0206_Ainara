@@ -1,6 +1,12 @@
 # Escribir una función que pida un número entero entre 1 y 10 y
 # guarde en un fichero con el nombre tabla-n.txt la tabla de 
 # multiplicar de ese número, donde n es el número introducido.
+def newFicheroMult (number):
 
-for x in range (1,10):
-    
+    file = open(f'tabla-{number}.txt','w')
+    for n in range (1,11):
+        value = n * number
+        file.write(f'\n{n} * {number} = {value}')
+    return value
+
+newFicheroMult(4)
