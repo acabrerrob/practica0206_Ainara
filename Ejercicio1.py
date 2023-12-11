@@ -3,14 +3,14 @@
 # multiplicar de ese número, donde n es el número introducido.
 def newFicheroMult ():
 
-    number = int(input('introduzca un numero'))
+    number = int(input('Introduzca un numero entre 1 y 10: '))
 
     file = open(f'tabla-{number}.txt','w')
 
     for n in range (0,11):
         value = n * number
         file.write(f'\n{n} * {number} = {value}')
-        
+
     return 
 
 newFicheroMult()
