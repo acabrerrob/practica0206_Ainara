@@ -29,4 +29,3 @@ def ficheroPrinter (number):
             print('El fichero no existe.')
     else:
         print('Su número entero no se encuentra entre 1 y 10')
-ficheroPrinter(0)
