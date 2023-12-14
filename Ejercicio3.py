@@ -1,13 +1,30 @@
-# Escribir una función que pida dos números n y m entre 1 y 10,
-# lea el fichero tabla-n.txt con la tabla de multiplicar de ese
-# número, y muestre por pantalla la línea m del fichero. Si el
-# fichero no existe debe mostrar un mensaje por pantalla informando de ello.
-def lineaFichero ():
+def lineaFichero (n,m):
+    """Función que pide un dos números n y m entre 1 y 10,
+        lea el fichero con el nombre tabla-n.txt 
+        con la tabla de multiplicar de ese número, y 
+        muestre por pantalla la línea m del fichero. 
+        Si el fichero no existe debe mostrar un mensaje
+        por pantalla informando de ello. 
+        
+    
+    Parámetro: 
+            - n: Número entero entre 1 y 10. Siendo n 
+            el númerop de la tabla de multiplicar.   
 
-    n = int(input('Introduzca un número entre 1 y 10: '))
-    m = int(input('Introduzca un número entre 1 y 10: '))
+            - m: Número entero entre 1 y 10. Siendo m
+            la línea del fichero n a mostrar.
+    
+    
+    Salida: 
+    
+    """
+    import os   #Importo la libreria.
 
-    file = open(f'tabla-{n}.txt', 'r')
-    print(file.read(m))
-    return
-lineaFichero()
+    if n and m in range (1,11) :
+        if os.path.exists(f'tabla-{n}.txt'):  
+        #Le pregunto a la libreria si existe el archivo.
+
+            file = open(f'tabla-{n}.txt', 'r')
+
+        print(file.readlines(m))
+        return
